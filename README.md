@@ -1,1 +1,1 @@
-This repo is for setup of React with Javascript Variant and integration of tailwindcss with ShadCn.
+This repo is for setup of React with Typescript Variant and integration of tailwindcss with ShadCn.
