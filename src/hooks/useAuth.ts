@@ -56,20 +56,20 @@ export const useAuth = () => {
       // Hardcoded credentials (Replace with API call later)
       let loggedInUser: AuthUser | null = null;
 
-      if (email === "teacher@example.com" && password === "password") {
+      if (email === "prathamesh.mane22@pccoepune.org" && password === "prathamesh.mane22@") {
         loggedInUser = {
           id: "teacher-1",
           email,
-          firstName: "John",
-          lastName: "Doe",
-          role: "teacher",
+          firstName: "Prathamesh",
+          lastName: "Mane",
+          role: "student",
         };
-      } else if (email === "student@example.com" && password === "password") {
+      } else if (email === "poudelrupace@gmail.com" && password === "poudelrupace@") {
         loggedInUser = {
           id: "student-1",
           email,
-          firstName: "Jane",
-          lastName: "Smith",
+          firstName: "Rupesh",
+          lastName: "Poudel",
           role: "student",
         };
       }
