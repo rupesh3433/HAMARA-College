@@ -1,42 +1,26 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
-function App() {
-  const [text, setText] = useState("");
-
+export default function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-5">
-      <h1 className="text-4xl font-bold text-blue-600 mb-4">
-        ✅ TailwindCSS & ShadCN Setup is Working!
-      </h1>
-      
-      <Button variant="default" className="mb-4">
-        ShadCN Button
-      </Button>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <header className="p-6 bg-white rounded-lg shadow-lg text-center">
+        <h1 className="text-2xl font-bold mb-4">Welcome to My App</h1>
 
-      <Card className="w-80 shadow-lg">
-        <CardHeader>
-          <CardTitle>ShadCN Card</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-600">This is a ShadCN Card component.</p>
-        </CardContent>
-      </Card>
+        <SignedOut>
+          <SignInButton>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+              Sign In
+            </button>
+          </SignInButton>
+        </SignedOut>
 
-      <div className="mt-4">
-        <label className="block text-gray-700 font-semibold mb-2">ShadCN Input:</label>
-        <Input 
-          type="text" 
-          placeholder="Type something..." 
-          value={text} 
-          onChange={(e) => setText(e.target.value)} 
-          className="w-64"
-        />
-      </div>
+        <SignedIn>
+          <div className="flex flex-col items-center">
+            <p className="mb-4 text-lg">You are signed in!</p>
+            <UserButton />
+          </div>
+        </SignedIn>
+      </header>
     </div>
   );
 }
-
-export default App;
