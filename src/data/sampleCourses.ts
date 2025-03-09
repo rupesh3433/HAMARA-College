@@ -1,0 +1,36 @@
+import { Course } from '../types';
+
+export const sampleCourses: Course[] = [
+  {
+    id: '1',
+    title: 'Introduction to React with TypeScript',
+    description: 'Learn the basics of React development with TypeScript.',
+    instructor: { id: '101', name: 'John Doe' },
+    thumbnail: '/api/placeholder/400/200',
+    category: 'development',
+    level: 'beginner',
+    duration: '4 weeks',
+    price: 49.99,
+    enrolledStudents: 1245,
+    lessons: [],
+    progress: 0,
+    createdAt: '2024-01-15',
+    updatedAt: '2024-02-20',
+  },
+  {
+    id: '2',
+    title: 'Advanced JavaScript Patterns',
+    description: 'Take your JavaScript skills to the next level.',
+    instructor: { id: '102', name: 'Jane Smith' },
+    thumbnail: '/api/placeholder/400/200',
+    category: 'development',
+    level: 'advanced',
+    duration: '6 weeks',
+    price: 79.99,
+    enrolledStudents: 834,
+    lessons: [],
+    progress: 0,
+    createdAt: '2024-02-10',
+    updatedAt: '2024-03-01',
+  },
+];
